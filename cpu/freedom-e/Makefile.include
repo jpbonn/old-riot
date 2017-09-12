@@ -1,0 +1,12 @@
+export LINKER_SCRIPT = fe310.ld
+
+include $(RIOTMAKE)/arch/riscv.inc.mk
+
+# export the common include directory
+export INCLUDES += -I$(RIOTCPU)/freedom-e/include
+export INCLUDES += -I$(RIOTCPU)/freedom-e/include/vendor
+export INCLUDES += -I$(RIOTCPU)/freedom-e/include/vendor/sifive
+
+export USEMODULE += periph
+
+
